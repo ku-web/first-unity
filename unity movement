@@ -1,0 +1,32 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class pllayr : MonoBehaviour
+
+{
+    public Rigidbody play;
+    // Start is called before the first frame update
+
+    // Update is called once per frame
+    void Update()
+    {
+           if (Input.GetKey("up"))
+        {
+            play.AddForce(0,0,1000 * Time.deltaTime);
+        }
+        if (Input.GetKey("down"))
+        {
+            play.AddForce(0, 0, -1
+                *1000 * Time.deltaTime);
+        }
+        if (Input.GetKey("left"))
+        {
+            play.AddForce(-1*1000 * Time.deltaTime,0,0);
+        }
+        if (Input.GetKey("right"))
+        {
+            play.AddForce(1000 * Time.deltaTime,0,0);
+        }
+    }
+}
